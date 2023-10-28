@@ -32,12 +32,40 @@ Learn the following:
 - [ ] What is the default shell on Microsoft?
 - [ ] What is priveledge escalation?
 - [ ] What is remote code execution?
+- [ ] [What is the cyber kill chain?](https://www.eccouncil.org/cybersecurity-exchange/threat-intelligence/cyber-kill-chain-seven-steps-cyberattack/)
 
-# Methodology
+
+# Attack Scenario: Zeegma Corporate espionage against Knowit Solutions Cocreate
+
+You are cyber mercenaries who have been contracted to perform corporate espionage against Knowit Solutions Cocreate. Your employer, Zeegma, has been falling behind its competitor Cocreate and is desperate to know why all its customers have left to Knowit Solutions Cocreate. Your objectives are the following:
+
+- Establish an Initial foothold in Cocreate's environment
+- Compromise Cocreate's CRM system
+- Compromise Cocreate's internal IT systems
+- Achieve persistance, either backdooring the user's workstations or internal IT systems
+- Report back to Zeegma about with your findings  
 
 
+
+- Reconnaiscance, information about the target is collected for analysis
+- 
+## Initial Foothold: Recon & Osint 
+## 
+
+
+## Recon & Pivoting through a victim network
+
+- [ ] Watch this video, [How To Pivot Through a Network with Chisel](https://www.youtube.com/watch?v=pbR_BNSOaMk)
+- [ ] Do a ping sweep on the Knowit corporate network, what hosts are up? Can you find other graduates machines?
+- [ ] Can you find the Invativa Network Attached Storage (NAS) host using nmap? (optional) use `nmap -p445 <network>` for SMB scanning
+- [ ] Write down your findings
+
+> [!IMPORTANT] 
+> Be careful when nmaping. Nmap will trigger alerts for network intrusion detection systems.
 
 ## Hacking basics & Hack the box
+
+After the reconnaiscance phase an attackaer
 
 There is no feeling better than poping a shell on a remote system, [Hack The Box](https://www.hackthebox.com) is a place where you can do that without getting arrested. Here are two boxes I recommend doing
 
