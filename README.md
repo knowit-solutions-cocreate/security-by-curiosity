@@ -7,17 +7,9 @@ Through your careers, people will try to sell security to you, either by some id
 
 The original scope of this exercise was limited to security by default. I do not know anything about that, so instead, I will teach you some of the things I have learned from my 3 years as a security analyst at one of the worlds largest managed security services providers.
 
-We will simulate a cyber attack against fictitious and real targets within our organization Knowit Solutions Cocreate. Don't worry, We have gotten permission from the Knowit Cheif Security Officer.
+For the rest of this exercise we will keep it simple and simulate a cyber attack : )
 
-
-# Instructions
-
-- [ ] Download this repo
-- [ ] Make a branch with your name
-
-You can now start working on the exercises.
-
-This guide will make you good at security. Joking. But it will give you a good foundation. It will probably make you more security aware than moste people around you though.
+Happy hacking
 
 # Basics
  
@@ -32,68 +24,63 @@ Learn the following:
 - [ ] What is the default shell on Microsoft?
 - [ ] What is priveledge escalation?
 - [ ] What is remote code execution?
-- [ ] [What is the cyber kill chain?](https://www.eccouncil.org/cybersecurity-exchange/threat-intelligence/cyber-kill-chain-seven-steps-cyberattack/)
-
 
 # Attack Scenario: Zeegma Corporate espionage against Knowit Solutions Cocreate
 
-You are cyber mercenaries who have been contracted to perform corporate espionage against Knowit Solutions Cocreate. Your employer, Zeegma, has been falling behind its competitor Cocreate and is desperate to know why all its customers have left to Knowit Solutions Cocreate. Your objectives are the following:
+You are cyber mercenaries who have been contracted to perform corporate espionage against Knowit Solutions Cocreate. Your employer, Zeegma, has been falling behind its competitor Cocreate and is desperate to know why all its customers have left to Knowit Solutions Cocreate. Your **primary objective** is to compromise Cocreate's customer relationship management platform (CRM) and emails for individuals who work with email. The **secondary objective** is to establish persistance inside Cocreate's environment so that the customer Zeegma can repeatedly extract valuable business intelligence from the victom.
 
-- Establish an Initial foothold in Cocreate's environment
-- Compromise Cocreate's CRM system
-- Compromise Cocreate's internal IT systems
-- Achieve persistance, either backdooring the user's workstations or internal IT systems
-- Report back to Zeegma about with your findings  
+## Action Plan
+
+Here are some steps that he cyber mercenaries would make to acheive the goal:
+
+- *Recon* Find some email addresses of Cocreate
+- Send targeted phishing emails
+- *Initial Foothold*: Login as employees using compromised 2fa tokens
+- **Primary Objective**: Search emails, teams and other instant messages for references to the CRM system.
+- **Secondary Objective**, *Persistance*: Send PMs from compromised accounts with attached malware (abuse trust relationships)
+- Log keystrokes to extract more credentials
+- **Primary Objective**: Extract cookies from browser to login to CRM using malware
+
+## Get Knowit Emails
+
+To send phishing emails, we need target addresses. There are multiple good ways of finding out addresses of the target organisation. Below is an example:
+
+### Go to [this link](https://phonebook.cz/)
+
+Use these credentials:
+
+`simplelogin.74q6u@simplelogin.com:8n6LYeZecRbcAD`
+
+### Search for email/domains/urls with domain `knowit.se`
+
+You get a long list of email addresses. What extra information do you need to add to this list to make it good enough for our spearphishing attack towards Cocreate?
+
+### Info to craft good spear phishing emails
+
+To design a good phishing email, attackers can use publicly known knowledge about individials or about the company. Typically, you would research trust relationships and hierarchies and spoof emails from a manager to subordinates.
+
+- where would you go on the internet to find sensitive info to craft spearphishing emails?
 
 
+## Initial Foothold & Persistance
 
-- Reconnaiscance, information about the target is collected for analysis
-- 
-## Initial Foothold: Recon & Osint 
-## 
+This part of the exercise will be demoed using our own emails during the presentation on the 9th of November 2023.
+
+# Extra: Exploiting Vulnerable Services
+
+Compromising organisations through phishing or other social engineering means is probably the easiest and most effective method of establishing a foothold in an organisation. However, with the advent of modular exploit delivery frameworks like metasploit, finding vulnerable targets on the internet is very easy and has lowered the barrier of entry to mass-exploitation for threat actors. Anyone can do this technique with access to some rotating proxies and a credit card for cloud services.
+
+## Attack Plan
+
+- Compile a list of common vulnerable services
+- Write a scanner that scans the entire Ipv4 range 
+- Scan the entire internet for the vulnerable services, rotating proxies as the your ip addresses get blacklisted
+- Compile dataset on exploited machines on the internet
+- Research each exploited service, who does it belong to, how much money do they make
+- Sell the initial access to other threat actors on hacker forums / Dark web
 
 
-## Recon & Pivoting through a victim network
+# Recommended Reading
 
-- [ ] Watch this video, [How To Pivot Through a Network with Chisel](https://www.youtube.com/watch?v=pbR_BNSOaMk)
-- [ ] Do a ping sweep on the Knowit corporate network, what hosts are up? Can you find other graduates machines?
-- [ ] Can you find the Invativa Network Attached Storage (NAS) host using nmap? (optional) use `nmap -p445 <network>` for SMB scanning
-- [ ] Write down your findings
-
-> [!IMPORTANT] 
-> Be careful when nmaping. Nmap will trigger alerts for network intrusion detection systems.
-
-## Hacking basics & Hack the box
-
-After the reconnaiscance phase an attackaer
-
-There is no feeling better than poping a shell on a remote system, [Hack The Box](https://www.hackthebox.com) is a place where you can do that without getting arrested. Here are two boxes I recommend doing
-
-- [ ] Blue, ms17-010, WannaCry Exploit, Here's a walkthrough [Ippsec walkthrough](https://www.youtube.com/watch?v=YRsfX6DW10E)
-- [ ] Shocker, Shellshock, Heres a walkthrough [Ippsec walkthrough](https://www.youtube.com/watch?v=IBlTdguhgfY)
-
-The first box demonstrates how trivial it is to pwn a system with one of the NSA tools Bluekeep which was leaked in 2017. The second box demonstrates the shellshock exploit, which people are still scanning for to this day, even though the exploit is almost 10 years old.
-
->[!NOTE]
-> The Ippsec guides can be a bit thick for a beginner. Just do an online search for a walkthrough. Do not try to hack on your own if you do not know what you are doing.
-
-# Open Source Intelligence gathering (OSINT) Course
-
-TODO Cyber mentor OSINT Guide, 
-
-# Mapping Knowit Infrastructure
-
-# Phishing & Spear Phishing
-
-EvilNginx
-
-# Getting Knowit Email Addresses
-
-- [ ] Get the list of emails from open source tools
-- [ ] Who is working in HR / Office?
-- [ ] Who is in management?
-- [ ] Who are the devs?
-- [ ] Use methods from OSINT guide
-- [ ] Brute force the Fake Webserver for access
-
-# Anti-virus evasion and hooking OS Api calls (advanced topic)
+- [ ] [Open-Source Intelligence (OSINT) in 5 Hours - Full Course - Learn OSINT! ](https://www.youtube.com/watch?v=qwA6MmbeGNo&t=7429s)
+- [ ] [Hack the box, pluralsight for hacking](https://www.hackthebox.com/)
