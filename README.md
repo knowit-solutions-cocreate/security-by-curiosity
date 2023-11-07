@@ -69,6 +69,11 @@ To design a good phishing email, attackers can use publicly known knowledge abou
 - where would you go on the internet to find sensitive info to craft spearphishing emails?
 
 
+### Task: Write your own phishing email
+
+Your task is to use all knowledge you have about your current colleagues and write a phishing email that maximises click through rate. Bring it to the seminar on 9th and we will read through them together.
+
+
 ## Initial Foothold & Persistance
 
 This part of the exercise will be demoed using our own emails during the presentation on the 9th of November 2023.
