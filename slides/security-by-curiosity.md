@@ -398,32 +398,71 @@ https://portal.office.com
 
 ---
 
-# Command & Control (c2)
+# Command & Control (c2) 
+```
+⠀⠀⠀⠀⠀⣀⣠⠤⠶⠶⣖⡛⠛⠿⠿⠯⠭⠍⠉⣉⠛⠚⠛⠲⣄⠀⠀⠀⠀⠀
+⠀⠀⢀⡴⠋⠁⠀⡉⠁⢐⣒⠒⠈⠁⠀⠀⠀⠈⠁⢂⢅⡂⠀⠀⠘⣧⠀⠀⠀⠀
+⠀⠀⣼⠀⠀⠀⠁⠀⠀⠀⠂⠀⠀⠀⠀⢀⣀⣤⣤⣄⡈⠈⠀⠀⠀⠘⣇⠀⠀⠀
+⢠⡾⠡⠄⠀⠀⠾⠿⠿⣷⣦⣤⠀⠀⣾⣋⡤⠿⠿⠿⠿⠆⠠⢀⣀⡒⠼⢷⣄⠀
+⣿⠊⠊⠶⠶⢦⣄⡄⠀⢀⣿⠀⠀⠀⠈⠁⠀⠀⠙⠳⠦⠶⠞⢋⣍⠉⢳⡄⠈⣧
+⢹⣆⡂⢀⣿⠀⠀⡀⢴⣟⠁⠀⢀⣠⣘⢳⡖⠀⠀⣀⣠⡴⠞⠋⣽⠷⢠⠇⠀⣼
+⠀⢻⡀⢸⣿⣷⢦⣄⣀⣈⣳⣆⣀⣀⣤⣭⣴⠚⠛⠉⣹⣧⡴⣾⠋⠀⠀⣘⡼⠃
+⠀⢸⡇⢸⣷⣿⣤⣏⣉⣙⣏⣉⣹⣁⣀⣠⣼⣶⡾⠟⢻⣇⡼⠁⠀⠀⣰⠋⠀⠀
+⠀⢸⡇⠸⣿⡿⣿⢿⡿⢿⣿⠿⠿⣿⠛⠉⠉⢧⠀⣠⡴⠋⠀⠀⠀⣠⠇⠀⠀⠀
+⠀⢸⠀⠀⠹⢯⣽⣆⣷⣀⣻⣀⣀⣿⣄⣤⣴⠾⢛⡉⢄⡢⢔⣠⠞⠁⠀⠀⠀⠀
+⠀⢸⠀⠀⠀⠢⣀⠀⠈⠉⠉⠉⠉⣉⣀⠠⣐⠦⠑⣊⡥⠞⠋⠀⠀⠀⠀⠀⠀⠀
+⠀⢸⡀⠀⠁⠂⠀⠀⠀⠀⠀⠀⠒⠈⠁⣀⡤⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠙⠶⢤⣤⣤⣤⣤⡤⠴⠖⠚⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+```
 
-## What is C2?
+---
 
-Command & control is a way to setup a client / server infrastructure for infected users. Here are some command an control frameworks:
+# What is Command & control / C2?
 
-## Cobalt Strik
+Command & control (c2) a client / server infrastructure for infected users. 
 
-Industry leader for C2
+- Using a c2 framework, a botmaster can send commands to be executed by the all the infected users
+- Infected users are usually referred to as bots, hence "botnet"
+
+## Typical Commands to execute are
+- Extract cookies from web browsers
+- Search the users files for passwords
+- Log keystrokes
+
+## Fun Commands you can execute
+- Turn on web-camera
+- Open Calculator
+- Turn on microphone
+- Play sounds 
+
+
+---
+
+# Command & Control Frameworks (2/2)
+
+Using a c2 framework is in red team engagements is common today and has many benifits:
+
+- Facilitates collaboration
+- Centralizes management of bots
+- I dont know what else, ask a red teamer : )
+
+## Covenant
+
+Open source .NET C2 Framework. This is what we will be using in our exercise in the next slide!
+
+
+## Cobalt Strike
+
+- Comercial product. Industry leader for C2 platform.
+- It's so good that even the bad guys use it
 
 link: https://www.cobaltstrike.com/
 
-## Empire, 
-
-Go to framework for that utlizes Powershell which is very good for Windows environments, I think!?
-
-link: https://github.com/BC-SECURITY/Empire
-
-### Custom Command & Control, 
-
-Advanced C2 framework for rapid deployment of new implants
-
-Link: https://github.com/WithSecureLabs/C3
-
 ## Further Reading
 
-Here is a larger list of c2 frameworks
+Here is a larger list of c2 frameworks if you want to test and play around a bit.
 
 https://github.com/tcostam/awesome-command-control
+
+---
+
