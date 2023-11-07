@@ -78,22 +78,10 @@ Your task is to use all knowledge you have about your current colleagues and wri
 
 This part of the exercise will be demoed using our own emails during the presentation on the 9th of November 2023.
 
-# Extra: Exploiting Vulnerable Services
-
-Compromising organisations through phishing or other social engineering means is probably the easiest and most effective method of establishing a foothold in an organisation. However, with the advent of modular exploit delivery frameworks like metasploit, finding vulnerable targets on the internet is very easy and has lowered the barrier of entry to mass-exploitation for threat actors. Anyone can do this technique with access to some rotating proxies and a credit card for cloud services.
-
-## Attack Plan
-
-- Compile a list of common vulnerable services
-- Write a scanner that scans the entire Ipv4 range 
-- Scan the entire internet for the vulnerable services, rotating proxies as the your ip addresses get blacklisted
-- Compile dataset on exploited machines on the internet
-- Research each exploited service, who does it belong to, how much money do they make
-- Sell the initial access to other threat actors on hacker forums / Dark web
-
 
 # Recommended Reading
 
 - [ ] [Open-Source Intelligence (OSINT) in 5 Hours - Full Course - Learn OSINT! ](https://www.youtube.com/watch?v=qwA6MmbeGNo&t=7429s)
 - [ ] [Hack the box, pluralsight for hacking](https://www.hackthebox.com/)
 - [ ] [How Phishers Are Slinking Their Links Into LinkedIn](https://krebsonsecurity.com/2022/02/how-phishers-are-slinking-their-links-into-linkedin/)
+- [ ] [How to set up Evilginx to phish Office 365 credentials](https://janbakker.tech/how-to-set-up-evilginx-to-phish-office-365-credentials/)
