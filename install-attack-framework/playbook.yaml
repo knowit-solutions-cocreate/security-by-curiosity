@@ -69,10 +69,9 @@
     - name: Create the directory with specific permissions
       command: install -m 0755 -d /etc/apt/keyrings
     - name: Download Docker GPG Key
-      shell: curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+      shell: curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor  --yes -o /etc/apt/keyrings/docker.gpg
       args:
         executable: /bin/bash
-
     - name: Set Permissions for Docker GPG Key
       file:
         path: /etc/apt/keyrings/docker.gpg
@@ -99,3 +98,7 @@
         dest: "{{ansible_env.HOME}}/Covenant" 
         version: master  
         recursive: yes 
+    - name: copy lakefs Docker Compose file
+      copy:
+        src: covenant/docker-compose.yaml
+        dest: "/home/{{ mds_remote_user }}/lakefs/docker-compose.yml"
