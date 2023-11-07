@@ -2,6 +2,7 @@
 - name: Install Evilnginx
   hosts: 66.228.62.183
   become: yes
+  tags: evilginx
   tasks:
 
     - name: Update apt package cache (for Debian/Ubuntu)
@@ -11,13 +12,16 @@
 
     - name: Install packages
       package:
-        name: tmux
+        name: "{{ item }}"
         state: present
       with_items:
         - tmux
         - golang-go
         - git
         - make
+      tags:
+        - install
+        - packages
 
     - name: Set up Go environment variables
       lineinfile:
@@ -26,11 +30,10 @@
       with_items:
         - 'export GOPATH=$HOME/go'
         - 'export PATH=$PATH:$GOPATH/bin'
-      when: ansible_os_family == 'Debian'
     - name: Clone the evilnginx2 repository
       git:
         repo: https://github.com/BakkerJan/evilginx2.git
-        dest: "{{ansible_env.home}}/"
+        dest: "{{ansible_env.HOME}}/evilginx2"
       register: git_clone_result
     - name: Print Clone result
       debug:
@@ -38,14 +41,28 @@
 - name: Install covenant
   hosts: 66.228.62.183
   become: yes
+  tags: covenant
   tasks:
     - name: Download Microsoft package repository configuration
-        get_url:
-          url: https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb
-          dest: /tmp/packages-microsoft-prod.deb  # Specify the destination path for the downloaded file
-          mode: 0644  # Set the file mode
-
-      - name: Install the Microsoft package repository
-        apt:
-          deb: /tmp/packages-microsoft-prod.deb
-          state: present
+      get_url:
+        url: https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb
+        dest: /tmp/packages-microsoft-prod.deb  # Specify the destination path for the downloaded file
+        mode: 0644  # Set the file mode
+    - name: Install the Microsoft package repository
+      apt:
+        deb: /tmp/packages-microsoft-prod.deb
+        state: present
+    - name: Update apt package cache (for Debian/Ubuntu)
+      apt:
+        update_cache: yes
+      when: ansible_os_family == 'Debian'
+    - name: Install dotnet
+      package:
+        name: dotnet-sdk-7.0
+        state: present
+    - name: Clone the Git Repository with Submodules
+      git:
+        repo: https://github.com/cobbr/Covenant
+        dest: "{{ansible_env.HOME}}/Covenant" 
+        version: master  
+        recursive: yes 
