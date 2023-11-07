@@ -5,7 +5,7 @@
 The following repo contains instructions for a seminar on cybersecurity for the graduate program of 2023.
 
 
-The goal is to feed your curiosity for hacking by studying red team tactics, a.k.a t. 
+The goal is to feed your curiosity for hacking by studying red team tactics, a.k.a the hacker/evil side 👹. 
 
 ## From Curious to 1337-h4ck3r?
 
