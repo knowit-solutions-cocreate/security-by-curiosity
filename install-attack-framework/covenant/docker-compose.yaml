@@ -1,0 +1,8 @@
+version: '2'
+services:
+  covenant:
+    build: .
+    container_name: covenant
+    network_mode: host
+    environment:
+      - DOMAIN=knowit.pictures

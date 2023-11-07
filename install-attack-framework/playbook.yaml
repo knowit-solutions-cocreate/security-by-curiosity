@@ -1,10 +1,9 @@
 ---
 - name: Install Evilnginx
-  hosts: 66.228.62.183
+  hosts: phish
   become: yes
   tags: evilginx
   tasks:
-
     - name: Update apt package cache (for Debian/Ubuntu)
       apt:
         update_cache: yes
@@ -39,7 +38,7 @@
       debug:
         var: git_clone_result
 - name: Install covenant
-  hosts: 66.228.62.183
+  hosts: c2
   become: yes
   tags: covenant
   tasks:
@@ -85,7 +84,7 @@
     - name: Create Docker APT Repository Entry
       copy:
         content: |
-          deb [arch="{{ system_architecture }}" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian "{{ debian_version }}" stable
+          deb [arch="{{ system_architecture.stdout }}" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian "{{ debian_version.stdout }}" stable
         dest: /etc/apt/sources.list.d/docker.list
       when: not ansible_check_mode 
     - name: Update apt package cache (for Debian/Ubuntu)
@@ -98,7 +97,12 @@
         dest: "{{ansible_env.HOME}}/Covenant" 
         version: master  
         recursive: yes 
-    - name: copy lakefs Docker Compose file
+    - name: Copy Docker Compose File
       copy:
         src: covenant/docker-compose.yaml
-        dest: "/home/{{ mds_remote_user }}/lakefs/docker-compose.yml"
+        dest: "{{ansible_env.HOME}}/Covenant/Covenant/docker-compose.yaml"
+    - name: Run docker compose
+      community.docker.docker_compose:
+        project_src: "{{ansible_env.HOME}}/Covenant/Covenant"
+        files:
+        - docker-compose.yaml
