@@ -1,18 +1,23 @@
+![SECURITY BY CURIOSITY](slides/img/security-by-curiosity.png)
 
-# Introduction Red Team / Blue Team
+# Why this repo?
 
-The goal of this exercise is to make you more cyber security aware. To acheive this, you will do some red team exercises, the offensive side, and then we will do some blue team exercises, the defensive side. Security is a very large doctrine. 
+The following repo contains instructions for a seminar on cybersecurity for the graduate program of 2023.
 
-Through your careers, people will try to sell security to you, either by some idea, which will cost your time, or a product which will cost both money and time. People will, with good intentions, misdirect your attention to perceived threats. Your duty as software engineers or IT practitioners is to keep yourselves well informed and to think critically when someone is selling you security, because [there is a lot of snake oil out there](https://en.wikipedia.org/wiki/Snake_oil)
 
-The original scope of this exercise was limited to security by default. I do not know anything about that, so instead, I will teach you some of the things I have learned from my 3 years as a security analyst at one of the worlds largest managed security services providers.
+The goal is to feed your curiosity for hacking by studying red team tactics, a.k.a t. 
 
-For the rest of this exercise we will keep it simple and simulate a cyber attack : )
+## From Curious to 1337-h4ck3r?
 
-Happy hacking
+People often ask the internet "teach me how to hack" or "How do I become a hacker?". As graduates, you are curious by nature, you have what it takes. When you apply curiosity to use tech in unintended ways, then you are a hacker. When you make these applications practical for other people, thats when you have become 1337-hacker :)
+
 
 # Basics
- 
+
+Below are some basics needed to better follow along the seminar on the 9th of November.
+
+Happy learning
+
 Learn the following:
 
 - [ ] What is dns?
@@ -86,3 +91,4 @@ Compromising organisations through phishing or other social engineering means is
 
 - [ ] [Open-Source Intelligence (OSINT) in 5 Hours - Full Course - Learn OSINT! ](https://www.youtube.com/watch?v=qwA6MmbeGNo&t=7429s)
 - [ ] [Hack the box, pluralsight for hacking](https://www.hackthebox.com/)
+- [ ] [How Phishers Are Slinking Their Links Into LinkedIn](https://krebsonsecurity.com/2022/02/how-phishers-are-slinking-their-links-into-linkedin/)
