@@ -4,5 +4,5 @@ services:
     build: .
     container_name: covenant
     network_mode: host
-    environment:
-      - DOMAIN=knowit.pictures
+    volumes:
+      - /opt/data:/appt/Data

@@ -57,7 +57,7 @@
       apt:
         update_cache: yes
       when: ansible_os_family == 'Debian'
-    - name: Install Certificate stuff
+    - name: Install Packages
       package:
         name: "{{ item }}"
         state: present
@@ -65,6 +65,8 @@
         - ca-certificates
         - curl
         - gnupg
+        - git
+        - tmux
     - name: Create the directory with specific permissions
       command: install -m 0755 -d /etc/apt/keyrings
     - name: Download Docker GPG Key
@@ -91,9 +93,32 @@
       apt:
         update_cache: yes
       when: ansible_os_family == 'Debian'
+    - name: Install Docker
+      package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - docker-ce 
+        - docker-ce-cli
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-compose-plugin
+        - python3-pip
+    - name: Install Docker Python Packages
+      pip:
+        name: "{{ item }}"
+      with_items:
+        - docker
+        - PyYaml
+        - docker-compose
+    - name: Create data directory if it does not exist
+      ansible.builtin.file:
+        path: "/opt/data"
+        state: directory
+        mode: '0755'
     - name: Clone the Git Repository with Submodules
       git:
-        repo: https://github.com/cobbr/Covenant
+        repo: https://github.com/reinthal/Covenant
         dest: "{{ansible_env.HOME}}/Covenant" 
         version: master  
         recursive: yes 
