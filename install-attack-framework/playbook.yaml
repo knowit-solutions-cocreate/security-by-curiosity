@@ -34,9 +34,16 @@
         repo: https://github.com/BakkerJan/evilginx2.git
         dest: "{{ansible_env.HOME}}/evilginx2"
       register: git_clone_result
-    - name: Print Clone result
-      debug:
-        var: git_clone_result
+    - name: Build Evilginx2
+      shell: make
+      args:
+        executable: /bin/bash
+        chdir: "{{ansible_env.HOME}}/evilginx2"
+    - name: Build Evilginx2
+      shell: make install
+      args:
+        executable: /bin/bash
+        chdir: "{{ansible_env.HOME}}/evilginx2"
 - name: Install covenant
   hosts: c2
   become: yes
