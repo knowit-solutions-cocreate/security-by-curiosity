@@ -80,7 +80,7 @@ This part of the exercise will be demoed using our own emails during the present
 
 
 # Recommended Reading
-
+- [ ] [The Jargon File](http://www.catb.org/jargon/html/index.html)
 - [ ] [Open-Source Intelligence (OSINT) in 5 Hours - Full Course - Learn OSINT! ](https://www.youtube.com/watch?v=qwA6MmbeGNo&t=7429s)
 - [ ] [Hack the box, pluralsight for hacking](https://www.hackthebox.com/)
 - [ ] [How Phishers Are Slinking Their Links Into LinkedIn](https://krebsonsecurity.com/2022/02/how-phishers-are-slinking-their-links-into-linkedin/)
