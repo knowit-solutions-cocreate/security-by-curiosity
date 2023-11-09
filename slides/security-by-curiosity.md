@@ -355,7 +355,7 @@ Then we do a vote on wrote the best email! : D
 ## Get phished
 
 - I will log in to a VPS I have setup and start the phishing server for o365
-- At my command, click this link [Totally legit link](https://login.knowit.pictures/HtUhNZtf)
+- At my command, click this link [Totally legit link](https://login.know1t.dev/bFclQKxa)
 - Authenticate against it 
 - We will read through the logs together
 
@@ -465,4 +465,76 @@ Here is a larger list of c2 frameworks if you want to test and play around a bit
 https://github.com/tcostam/awesome-command-control
 
 ---
+
+# Infecting Ourselves with Covenant
+
+
+## Here's our covenant payload
+
+If you didn't get it from the previous step here it is:
+
+http://c2.know1t.dev/knowitsolutionscocreatefalkenberg-2023-com/program.exe
+
+I will distribute it in the chat also
+
+## What is this program?
+
+This is a C# implant of the Covenant family. It targets dotnet 4.0, this should be pre-installed on most windows machines
+
+# Who can Detect it?
+
+Let's go to virustotal and see who can detect it! : )
+
+# What happens when I run it?
+
+I will demo what happens
+
+## Login to arch Frogman box
+## demonstrate that it is not detected by Anti-Virus
+## Execute it
+## Go to Covenant Command & Control Panel
+## Execute command
+
+- List Directory
+- Take Screenshots
+- Run Keylogger
+- Notice the Persist* commands 
+
+## Discussion:
+
+- What are the necessary user-interaction steps to get this payload executing on a workstation for an attacker?
+- What does the attack chain look like? From phish to infection
+- What countermeasures do we need to defeat as an attacker?
+- How can a developer design programs that circumvent these tactics?
+---
+
+# But wait ...
+
+## "This isn't hacking, it's just social engineering..."
+
+Yes. And it's the most effective way when you want to target a specific organisation.
+
+
+# Another tactic is 
+- to scan the internet for vulnerable services, and exploit and then recon.
+- When you find a juicy potatoe then you launch attack. 
+- Or sell initial access to highest bidder, and let someone else ransomware the infected network.
+
+## Shodan.io
+
+is a website that shows internet exposed services. Start here to find vulnerable services
+
+
+
+---
+
+# Summary
+
+## We have talked about Cyber-kill chain
+## We have talked about reconnaisence
+## We have demoed how to phish
+## We have looked at post infection
+
+https://virustotal.com
+
 
