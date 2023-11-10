@@ -161,7 +161,34 @@ Alexander Reinthal
 - Tech lover
 - Musician
 - Gamer
-
+```
+            .-""-.
+          _.->    <-._
+       .-"   '-__-'   "-.
+     ,"                  ",
+   .'                      ',
+  /    ___...------...___    \
+ /_.-*"__...--------...__"*-._\
+:_.-*"'  .*"*-.  .-*"*.  '"*-._;
+;       /      ;:      \       :
+;      ;    *  !!  *    :      :
+:      :     .'  '.     ;      ;
+ \      '-.-'      '-.-'      /
+  \                          /
+   '.                      .'
+     *,      '-__-'      ,*
+     /.'-_            _-'.'\
+    /  "-_"*-.____.-*"_-"   \
+   /      '"*-.___.-*'       \
+  :    :        |        ;    ;
+  |.--.;       *|        :.--.|
+  (   ()        |        ()   )
+   '--^_       *|        _^--'
+      | "'*--.._I_..--*'" |
+      | __..._  | _..._   |
+     .'"      `"'"     ''"'.
+     """""""""""""""""""""""
+```
 ---
 # Outline
 ## Talkthrough of Attack Scenario: Zeegma Corporate Espionage
@@ -245,7 +272,33 @@ corporate espionage against Knowit Solutions Cocreate.
 - Your employer, Zeegma, has been falling behind its competitor Cocreate
 - Zeegma is desperate to know why all its customers have left to Knowit Solutions Cocreate. 
 
-
+```     
+       ____________
+   ___/ ___________\
+  / ___/           _____
+ / /              (____ \
+| |  E V 1 L           \ \
+| |      1 N 5 1 D E    ) )
+ \ \__               __/ /           __
+  \__ \_____________/ __/        ___/  \
+     \_______________/       ___/       \_
+                         ___/             \
+                     ___/   __/            \
+                 ___/   __  \__/\           \
+             ___/    __/        _\      ___/|
+        ____/    __     \      /    ___/ _  (
+       /        \ /_     \      ___/ _   \\ |
+       |\  __    \  /       ___/ _   \\  _H_/
+       | \/  \    \/    ___/ _   \\  _H_/ Y
+       |`|  _/      ___/ _   \\  _H_/ Y   !   MEPH.
+        \|_|\   ___/ _   \\  _H_/ Y   !   !
+        !  | \_/ _   \\  _H_/ Y   !   !
+        !  \` |  \\  _H_/ Y   !   !
+            \`|  _H_/ Y   !   !
+             \|_/ Y   !   !
+                  !   !
+                  !
+```
 ---
 
 
@@ -438,7 +491,7 @@ Command & control (c2) a client / server infrastructure for infected users.
 
 ---
 
-# Command & Control Frameworks (2/2)
+# Command & Control Frameworks
 
 Using a c2 framework is in red team engagements is common today and has many benifits:
 
@@ -465,8 +518,7 @@ Here is a larger list of c2 frameworks if you want to test and play around a bit
 https://github.com/tcostam/awesome-command-control
 
 ---
-
-# Infecting Ourselves with Covenant
+# Infecting Ourselves with Covenant (1/2)
 
 
 ## Here's our covenant payload
@@ -488,6 +540,10 @@ Let's go to virustotal and see who can detect it! : )
 # What happens when I run it?
 
 I will demo what happens
+
+---
+# Infecting Ourselves with Covenant (2/2)
+
 
 ## Login to arch Frogman box
 ## demonstrate that it is not detected by Anti-Virus
@@ -514,8 +570,10 @@ I will demo what happens
 
 Yes. And it's the most effective way when you want to target a specific organisation.
 
+Many hacks are very simple and not technologically advanced.
 
 # Another tactic is 
+
 - to scan the internet for vulnerable services, and exploit and then recon.
 - When you find a juicy potatoe then you launch attack. 
 - Or sell initial access to highest bidder, and let someone else ransomware the infected network.
