@@ -7,9 +7,9 @@ The following repo contains instructions for a seminar on cybersecurity for the 
 
 The goal is to feed your curiosity for hacking by studying red team tactics, a.k.a the hacker/evil side 👹. 
 
-## From Curious to 1337-h4ck3r?
+## Why is curiosity good for security?
 
-People often ask the internet "teach me how to hack" or "How do I become a hacker?". As graduates, you are curious by nature, you have what it takes. When you apply curiosity to use tech in unintended ways, then you are a hacker. When you make these applications practical for other people, thats when you have become 1337-hacker :)
+People often ask the internet "teach me how to hack" or "How do I become a hacker?". As graduates, you are curious by nature, you have what it takes. When you apply curiosity to use tech in unintended ways, then you are improving your internalizing knowledge about systems and how they function. This is arguably the best way to learn about cyber security.
 
 
 # Basics
