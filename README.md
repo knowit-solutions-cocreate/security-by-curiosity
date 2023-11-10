@@ -9,8 +9,7 @@ The goal is to feed your curiosity for hacking by studying red team tactics, a.k
 
 ## Why is curiosity good for security?
 
-When you apply curiosity to use tech in unintended ways, then you are improving your internalizing knowledge about systems and how they function. This is arguably the best way to learn about cyber security.
-
+When you apply curiosity to use tech in unintended ways, i.e hacking, then you are internalizing knowledge about systems and how they function. This is arguably the best way to learn about cyber security.
 
 # Basics
 
