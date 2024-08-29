@@ -1,7 +1,7 @@
 ---
 
 # SECURITY BY CURIOSITY
-Graduate Program 2023
+Graduate Program 2024
 ```
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠶⠛⠉⠀⠀⠀⠀⠉⠙⠶⠦⣀⡀⠀⠀⠀⣀⣠⠴⠶⠞⠛⠛⠶⠤⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -108,7 +108,7 @@ Whitehat, show them the video...
  ||      _  |_      ||
  C|     (o\_/o)     |O     Uhhh, this computer
   \      _____      /       is like, busted or
-    \ ( /#####\ ) /       something. So go away.
+    \ ( /#####\ ) /       something.
      \  `====='  /
       \  -___-  /
        |       |
@@ -154,7 +154,7 @@ Defending is harder than attacking
 
 # $ whoami
 Alexander Reinthal
-35y
+36y
 - Former Cyber Security Analyst
 - Current Data Engineer / Data Scientist
 - Father / Sambo
@@ -192,13 +192,12 @@ Alexander Reinthal
 ---
 # Outline
 ## Talkthrough of Attack Scenario: Zeegma Corporate Espionage
-## Cyber Kill Chain
+## Theory 0: Cyber Kill Chain
 ## Exercise I: Sending & Clicking on Phishing Emails 🎣
-## Exercise II: Infecting Ourselves with malware 🤣 🦟
-## Exercise III: Local Network Attacks & Other lulz (If enough time)
-## Talkthrough: Selling Initial Access & Shodan 🏆 💸
-## Digging deeper: Network Pivoting & Beyond ⛰️
-## Summary 🧮
+## Exercise II: Infecting Ourselves with malware 🦟
+## Talkthrough III: Selling Initial Access & Shodan 🏆 💸
+## Digging deeper IV: Network Pivoting & Beyond ⛰️
+## Summary VI: 🧮
 
 ---
 # Background on Cyber Kill Chain 
@@ -231,9 +230,17 @@ The weapon is delivered. In the case of phishing, you click send.
 
 ## Exploitation 😈, use weakness
 
-The target is baited into clicking the link, because the email said that HR had gotten a complaint of discrimination by the employee. 
+The target is socially engineered into clicking the link, 
 
-hehe : ) or something like that.
+Example: 
+```
+We have gotten a complaint from HR that you have been harrassing employee X.
+Please click this link to book an appointment with HR for discussing this urgent issue further
+
+https://superlegitlink.click/qrwetuqweuryuo
+
+Kindly, Senior Management
+```
 
 ## Installation 💾, install malware
 
@@ -319,7 +326,7 @@ is to establish persistance inside Cocreate's environment so that the Zeegma can
 
 - Persistance is typically a backdoor into an IT system.
 - In general, it is any mechanism that let's the adversary to keep its foothold in the target organisation, 
-- **Examples**: Custom admin access to the CRM, A rogue Office 365 account, a remote access trojan or similar.
+- **Examples**: Custom admin access to the CRM, A rogue Office 365 account, a remote access trojan or similar. Publicly shared urls in sharepoint with no expiration date.
 
 ---
 # Action Plan (1/3) The CRM System:
@@ -369,7 +376,7 @@ Here what we will do to acheive the primary objective:
 
 ---
 
-# Exercise Hacking Time: Phish or Get Phished
+# Exercise Hacking Time: Phishing
 ```
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢋⣠⣼⣿⣿⣦⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣴⣿⣿⣿⣿⣿⣿⣧⠹⣿⣿⣿⣿⣿⣿⣿⣿
@@ -400,15 +407,10 @@ Here what we will do to acheive the primary objective:
 
 # Exercise Hacking Time
 
-## Show & Tell
-
-Let's go around the table and read each other's phishing emails.
-Then we do a vote on wrote the best email! : D
-
 ## Get phished
 
 - I will log in to a VPS I have setup and start the phishing server for o365
-- At my command, click this link [Totally legit link](https://login.know1t.dev/bFclQKxa)
+- At my command, click this link TODO Setup login url
 - Authenticate against it 
 - We will read through the logs together
 
@@ -493,7 +495,7 @@ Command & control (c2) a client / server infrastructure for infected users.
 
 # Command & Control Frameworks
 
-Using a c2 framework is in red team engagements is common today and has many benifits:
+Using a c2 framework in red team engagements is common today and has many benifits:
 
 - Facilitates collaboration
 - Centralizes management of bots
@@ -525,10 +527,10 @@ https://github.com/tcostam/awesome-command-control
 
 If you didn't get it from the previous step here it is:
 
-http://c2.know1t.dev/knowitsolutionscocreatefalkenberg-2023-com/program.exe
-
 I will distribute it in the chat also
 
+
+** Link to covenant payload
 ## What is this program?
 
 This is a C# implant of the Covenant family. It targets dotnet 4.0, this should be pre-installed on most windows machines
@@ -574,15 +576,13 @@ Many hacks are very simple and not technologically advanced.
 
 # Another tactic is 
 
-- to scan the internet for vulnerable services, and exploit and then recon.
+- To scan the internet for vulnerable services, and exploit and then recon.
 - When you find a juicy potatoe then you launch attack. 
 - Or sell initial access to highest bidder, and let someone else ransomware the infected network.
 
 ## Shodan.io
 
 is a website that shows internet exposed services. Start here to find vulnerable services
-
-
 
 ---
 
