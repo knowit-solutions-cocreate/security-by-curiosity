@@ -33,7 +33,7 @@ Learn the following:
 
 You are cyber mercenaries who have been contracted to perform corporate espionage against Knowit Solutions Cocreate. Your employer, Zeegma, has been falling behind its competitor Cocreate and is desperate to know why all its customers have left to Knowit Solutions Cocreate. Your **primary objective** is to compromise Cocreate's customer relationship management platform (CRM) and emails for individuals who work with the CRM system. Using the compromised accounts, you will relay customer relations information to Zeegma, and brief them on your findings.
 
-The **secondary objective** is to establish persistance inside Cocreate's environment so that the customer Zeegma can repeatedly extract valuable business intelligence from the victom.
+The **secondary objective** is to establish persistance inside Cocreate's environment so that the customer Zeegma can repeatedly extract valuable business intelligence from the victim.
 
 ## Action Plan
 
